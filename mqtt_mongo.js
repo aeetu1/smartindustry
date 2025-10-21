@@ -1,8 +1,8 @@
 
 //MQTT Broker definitions
 const mqtt    = require('mqtt');
-const broker = 'mqtt://automaatio:Z0od2PZF65jbtcXu@automaatio.cloud.shiftr.io';
-//const broker = 'mqtt://test.mosquitto.org';
+//const broker = 'mqtt://automaatio:Z0od2PZF65jbtcXu@automaatio.cloud.shiftr.io';
+const broker = 'mqtt://test.mosquitto.org';
 const user = '';
 const pw = ''; 
 
@@ -13,7 +13,7 @@ mq = mqtt.connect(broker, {
 });
 
 //subscribe the topic
-mq.subscribe('automaatio/#');
+mq.subscribe('automaatio1/#');
 
 //dotify about successful connection
 mq.on('connect', function(){

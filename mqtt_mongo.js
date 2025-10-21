@@ -25,7 +25,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 // Replace the URI-string below by your own URI (get that from Mongo DB Atlas 
 // Connect > driver > NodeJs (v. 6.7), don't forget to add your own username & password to the string
-const uri = "mongodb+srv://eki:eki@cluster0.91fze.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; 
+const uri = "mongodb+srv://eetu1:eetu1@cluster0automaatio.pklakoi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0automaatio"; 
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -53,8 +53,8 @@ mq.on('message', function(topic, message) {
 	console.log(obj);
  
 	//Definition of database & collection and and object for data retrieval/storage
-	const myDB = client.db(dbname);
-	const myColl = myDB.collection(collection);
+	const myDB = client.db(sensori);
+	const myColl = myDB.collection(sensori);
   
 	//insertion of ¨message to MongoDB
 	myColl.insertOne(obj);

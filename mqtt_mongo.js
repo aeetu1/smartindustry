@@ -53,8 +53,8 @@ mq.on('message', function(topic, message) {
 	console.log(obj);
  
 	//Definition of database & collection and and object for data retrieval/storage
-	const myDB = client.db(sensori);
-	const myColl = myDB.collection(sensori);
+	const myDB = client.db(sensoridata2);
+	const myColl = myDB.collection(sensoridata2);
   
 	//insertion of ¨message to MongoDB
 	myColl.insertOne(obj);
